@@ -36,7 +36,7 @@ def two_body_eom(state, time, G, m1, m2):
     vel = state[9:12] - state[6:9]
 
     # calc dvdt and return
-    a = -(m1+m2) * G * r_vec / (r_mag)**3
+    a = -(m1) * G * r_vec / (r_mag)**3
 
     return np.concatenate((state[6:9], vel, [0,0,0], a))
 
